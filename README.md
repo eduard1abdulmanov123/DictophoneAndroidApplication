@@ -6,7 +6,7 @@
 
 <img src="https://github.com/eduard1abdulmanov123/DictophoneAndroidApplication/blob/master/Screenshots/3.jpg" width="300" height="500"><img src="https://github.com/eduard1abdulmanov123/DictophoneAndroidApplication/blob/master/Screenshots/4.jpg" width="300" height="500">
 
-<img src="https://github.com/eduard1abdulmanov123/DictophoneAndroidApplication/blob/master/Screenshots/3.jpg" width="300" height="500"><img src="https://github.com/eduard1abdulmanov123/DictophoneAndroidApplication/blob/master/Screenshots/6.jpg" width="300" height="500">
+<img src="https://github.com/eduard1abdulmanov123/DictophoneAndroidApplication/blob/master/Screenshots/5.jpg" width="300" height="500"><img src="https://github.com/eduard1abdulmanov123/DictophoneAndroidApplication/blob/master/Screenshots/6.jpg" width="300" height="500">
 
 <img src="https://github.com/eduard1abdulmanov123/DictophoneAndroidApplication/blob/master/Screenshots/7.jpg" width="300" height="500"><img src="https://github.com/eduard1abdulmanov123/DictophoneAndroidApplication/blob/master/Screenshots/8.jpg" width="300" height="500">
 
