@@ -17,10 +17,12 @@ public class Sound {
         mFile = file;
     }
 
-    public interface CallbackSetupSpecifications{
+    public interface CallbackSetupSpecifications {
+
         void finish();
     }
-    public void sutupSpecifications(final CallbackSetupSpecifications callback){
+
+    public void sutupSpecifications(final CallbackSetupSpecifications callback) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -31,10 +33,10 @@ public class Sound {
                         installDate();
                     if (mTime == null)
                         installTime();
-                } catch (RuntimeException runtime){
+                } catch (RuntimeException runtime) {
                     String[] component = mFile.getPath().split("/");
-                    String dir = component[component.length-2];
-                    FileManager.clearFileInExternalStorage(dir,mFile.getName());
+                    String dir = component[component.length - 2];
+                    FileManager.clearFileInExternalStorage(dir, mFile.getName());
                 }
                 callback.finish();
             }
