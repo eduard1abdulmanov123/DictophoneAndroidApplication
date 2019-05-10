@@ -47,7 +47,7 @@ public class DictaphoneActivity extends AppCompatActivity implements PlaybackInf
     private ProgressDialog mProgressDialog;
     private boolean mBound;
 
-    Handler handlerHideProgress = new Handler(){
+    Handler handlerHideProgress = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
