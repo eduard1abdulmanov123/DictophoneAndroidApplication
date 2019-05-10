@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="64dp"
+  android:layout_margin="5dp"
+  android:background="@drawable/border_rectangle_circle_view_gray"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <ImageView
+    android:id="@+id/list_item_sound_image_view"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="8dp"
+    android:background="@drawable/border_circle_view_red"
+    android:src="@drawable/ic_micro"
+    android:padding="4dp"/>
+
+  <TextView
+    android:id="@+id/list_item_sound_name_text_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/list_item_sound_image_view"
+    android:layout_alignTop="@+id/list_item_sound_image_view"
+    android:layout_marginLeft="10dp"
+    android:textSize="15sp"
+    android:textColor="@color/colorPrimaryText"
+    tools:hint="Name"/>
+
+  <TextView
+    android:id="@+id/list_item_sound_date_text_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/list_item_sound_image_view"
+    android:layout_alignBottom="@+id/list_item_sound_image_view"
+    android:layout_marginLeft="10dp"
+    android:textSize="13sp"
+    android:textColor="@color/colorSecondaryText"
+    tools:hint="23.04.2019"/>
+
+  <TextView
+    android:id="@+id/list_item_sound_time_text_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignBottom="@+id/list_item_sound_image_view"
+    android:layout_marginRight="30dp"
+    android:textSize="13sp"
+    android:textColor="@color/colorSecondaryText"
+    tools:hint="00:00:39"/>
+
+</RelativeLayout>

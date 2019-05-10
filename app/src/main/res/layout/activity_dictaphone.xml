@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <TextView
+    android:id="@+id/activity_dictaphone_stop_watch"
+    android:layout_width="180dp"
+    android:layout_height="180dp"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="50dp"
+    android:text="00:00:00"
+    android:textColor="@color/colorPrimaryText"
+    android:textSize="40sp"
+    android:gravity="center"
+    android:background="@drawable/border_circle_not_solid_red"
+    android:fontFamily="sans-serif-condensed" />
+
+  <TextView
+    android:id="@+id/activity_dictaphone_state_dictaphone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_above="@id/activity_dictaphone_container_for_button"
+    android:textSize="13sp"
+    android:textColor="@color/colorPrimaryText"
+    android:textStyle="bold"
+    android:text="@string/start_recording"/>
+  
+  <RelativeLayout
+    android:id="@+id/activity_dictaphone_container_for_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="30dp"
+    android:layout_alignParentBottom="true">
+    
+    <android.abdulmanov.dictophone.views.CustomImageButton
+      android:id="@+id/activity_dictaphone_save_btn"
+      android:layout_toLeftOf="@id/activity_dictaphone_recording_stop__btn"
+      android:src="@drawable/ic_save"
+      app:enabled="false"
+      style="@style/ImageButtonCircleDictaphone"/>
+
+    <android.abdulmanov.dictophone.views.CustomImageButton
+      android:id="@+id/activity_dictaphone_recording_stop__btn"
+      android:layout_centerHorizontal="true"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:src="@drawable/ic_micro"
+      style="@style/ImageButtonCircleDictaphone"/>
+
+    <android.abdulmanov.dictophone.views.CustomImageButton
+      android:id="@+id/activity_dictaphone_list_delete__btn"
+      android:layout_toRightOf="@id/activity_dictaphone_recording_stop__btn"
+      android:src="@drawable/ic_list"
+      style="@style/ImageButtonCircleDictaphone"/>
+
+  </RelativeLayout>
+  
+</RelativeLayout>

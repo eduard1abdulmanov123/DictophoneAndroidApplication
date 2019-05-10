@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/border_dialog"
+  android:padding="15dp">
+
+  <TextView
+    android:id="@+id/activity_dialog_player_name_file"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:textSize="20sp"
+    android:textColor="@color/colorPrimaryText"/>
+
+  <RelativeLayout
+    android:id="@+id/activity_dialog_player_container_for_seek_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/activity_dialog_player_name_file"
+    android:layout_marginTop="10dp">
+
+    <TextView
+      android:id="@+id/activity_dialog_player_current_time"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:textSize="13sp"
+      android:textColor="@color/colorSecondaryText"
+      android:text="00:00:00"/>
+
+    <SeekBar
+      android:id="@+id/activity_dialog_player_seek_bar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_toLeftOf="@id/activity_dialog_player_duration"
+      android:layout_toRightOf="@id/activity_dialog_player_current_time"
+      android:progressDrawable="@drawable/progress_bar"/>
+
+    <TextView
+      android:id="@+id/activity_dialog_player_duration"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:textSize="13sp"
+      android:textColor="@color/colorSecondaryText"
+      android:text="00:00:00"/>
+
+  </RelativeLayout>
+
+  <ImageButton
+    android:id="@+id/activity_dialog_player_play_stop_btn"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_below="@id/activity_dialog_player_container_for_seek_bar"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/border_circle_view_red"
+    android:src="@drawable/ic_play"
+    android:scaleType="fitXY"
+    android:padding="5dp"/>
+</RelativeLayout>

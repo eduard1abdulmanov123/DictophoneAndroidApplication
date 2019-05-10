@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="android.abdulmanov.dictophone"
+  android:installLocation="preferExternal">
+
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher_new"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_new_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+    <activity android:name="android.abdulmanov.dictophone.activities.DialogCancelActivity"
+      android:parentActivityName="android.abdulmanov.dictophone.activities.DictaphoneActivity"
+      android:excludeFromRecents="true"
+      android:screenOrientation="portrait"
+      android:theme="@style/UserDialog">
+    </activity>
+    <activity
+      android:excludeFromRecents="true"
+      android:name="android.abdulmanov.dictophone.activities.DialogPlayerActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/UserDialog">
+    </activity>
+    <activity
+      android:excludeFromRecents="true"
+      android:name="android.abdulmanov.dictophone.activities.DialogEditTextActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/UserDialog">
+    </activity>
+    <activity
+      android:label="@string/list_name"
+      android:name="android.abdulmanov.dictophone.activities.ListSoundActivity"
+      android:screenOrientation="portrait">
+    </activity>
+    <activity android:name="android.abdulmanov.dictophone.activities.DictaphoneActivity"
+      android:launchMode="singleTop"
+      android:excludeFromRecents="true"
+      android:screenOrientation="portrait"
+      android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+
+    <service android:name="android.abdulmanov.dictophone.service.DictaphoneService.DictaphoneService"/>
+  </application>
+
+</manifest>

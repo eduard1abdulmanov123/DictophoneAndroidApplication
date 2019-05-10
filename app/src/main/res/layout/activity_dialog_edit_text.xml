@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/border_dialog"
+  android:padding="15dp"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <TextView
+    android:id="@+id/activity_dialog_edit_text_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:textSize="16sp"
+    android:textColor="@color/colorPrimaryText"/>
+
+  <EditText
+    android:id="@+id/activity_dialog_edit_text_edit"
+    android:layout_below="@id/activity_dialog_edit_text_title"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="25dp"
+    android:cursorVisible="true"
+    style="@style/EditText"/>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/activity_dialog_edit_text_edit"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="25dp"
+    android:orientation="horizontal">
+
+    <Button
+      android:id="@+id/activity_dialog_edit_text_cancel"
+      android:layout_weight="1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="10dp"
+      android:background="@drawable/border_rectangle_circle_view_gray"
+      android:text="@string/cancel"
+      android:textSize="13sp"
+      android:textAllCaps="false"/>
+
+    <Button
+      android:id="@+id/activity_dialog_edit_text_ok"
+      android:layout_weight="1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/border_rectangle_circle_view_gray"
+      android:text="@string/ok"
+      android:textSize="13sp"
+      android:textAllCaps="false"/>
+  </LinearLayout>
+</RelativeLayout>

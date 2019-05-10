@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/custom_notification_view"
+  android:layout_width="match_parent"
+  android:layout_height="64dp"
+  android:layout_margin="5dp"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <ImageView
+    android:id="@+id/custom_notification_image_view"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_centerVertical="true"
+    android:background="@drawable/border_circle_view_red"
+    android:src="@drawable/ic_micro"
+    android:padding="4dp"/>
+
+  <TextView
+    android:id="@+id/custom_notification_state_text_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/custom_notification_image_view"
+    android:layout_alignTop="@id/custom_notification_image_view"
+    android:layout_marginLeft="10dp"
+    android:textSize="13sp"
+    android:textColor="@color/colorPrimaryText"
+    android:text="@string/state_recording"
+    tools:hint="Name"/>
+
+  <TextView
+    android:id="@+id/custom_notification_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/custom_notification_image_view"
+    android:layout_alignBottom="@id/custom_notification_image_view"
+    android:layout_marginLeft="10dp"
+    android:textSize="11sp"
+    android:textColor="@color/colorSecondaryText"
+    tools:hint="00:00:00"/>
+
+  <ImageButton
+    android:id="@+id/custom_notification_clear_btn"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_marginRight="10dp"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:src="@drawable/clear_dark"
+    android:background="#fff"/>
+
+  <ImageButton
+    android:id="@+id/custom_notification_recording_pause_btn"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_toLeftOf="@id/custom_notification_clear_btn"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="20dp"
+    android:src="@drawable/pause_dark"
+    android:background="#fff"/>
+
+  <ImageButton
+    android:id="@+id/custom_notification_save_btn"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_toLeftOf="@id/custom_notification_recording_pause_btn"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="20dp"
+    android:src="@drawable/save_dark"
+    android:background="#fff"/>
+</RelativeLayout>
