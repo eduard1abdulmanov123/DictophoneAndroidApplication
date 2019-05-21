@@ -206,6 +206,7 @@ public class DictaphoneHolder extends Binder implements DictaphoneAdapter {
     @Override
     public void save(String nameFile) {
         try {
+            FileManager.createDirExternalStoragePublic(mDirName);
             File fileMusic = FileManager
                     .createFileExternalStoragePublic(mDirName, nameFile + FORMAT);
             List<File> list = new ArrayList<>();

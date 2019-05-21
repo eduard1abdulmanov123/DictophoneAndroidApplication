@@ -23,6 +23,8 @@
     android:layout_toRightOf="@+id/list_item_sound_image_view"
     android:layout_alignTop="@+id/list_item_sound_image_view"
     android:layout_marginLeft="10dp"
+    android:ellipsize="end"
+    android:singleLine="true"
     android:textSize="15sp"
     android:textColor="@color/colorPrimaryText"
     tools:hint="Name"/>
