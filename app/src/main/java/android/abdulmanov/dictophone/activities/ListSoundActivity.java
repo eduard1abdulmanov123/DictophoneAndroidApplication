@@ -2,14 +2,12 @@ package android.abdulmanov.dictophone.activities;
 
 import android.abdulmanov.dictophone.R;
 import android.abdulmanov.dictophone.model.Sound;
-import android.abdulmanov.dictophone.model.Sound.CallbackSetupSpecifications;
 import android.abdulmanov.dictophone.utilities.FileManager;
 import android.abdulmanov.dictophone.views.ItemTouchHelper.ItemTouchHelperAdapter;
 import android.abdulmanov.dictophone.views.ItemTouchHelper.SimpleItemTouchHelperCallback;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -88,7 +86,10 @@ public class ListSoundActivity extends AppCompatActivity {
         File[] files = FileManager
                 .getFilesWithExternalPublicStorage(getIntent().getStringExtra(ARG_DIRECTORY_SOUND));
         for (File file : files) {
-            sounds.add(new Sound(file));
+            Sound sound = new Sound(file);
+            sound.sutupSpecifications();
+            sounds.add(sound);
+
         }
         return sounds;
     }
@@ -112,19 +113,9 @@ public class ListSoundActivity extends AppCompatActivity {
 
         public void bindSound(Sound sound) {
             mSound = sound;
-            mSound.sutupSpecifications(new CallbackSetupSpecifications() {
-                @Override
-                public void finish() {
-                    mName.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mName.setText(mSound.getName());
-                            mDate.setText(mSound.getDate());
-                            mTime.setText(mSound.getTime());
-                        }
-                    });
-                }
-            });
+            mName.setText(mSound.getName());
+            mDate.setText(mSound.getDate());
+            mTime.setText(mSound.getTime());
         }
 
 
